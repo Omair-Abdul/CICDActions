@@ -18,16 +18,16 @@ jobs:
         run: |
                  # Build and Deploy the Package
                  echo Packing project
-                 UiPath.CLI.Windows.23.6.8581.19168\uipcli.exe package pack "project.json" -o "Output"
+                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package pack "project.json" -o "Output"
       # Use uipcli to run tests
       - name: Pack and Test
         run: |
                  echo Running Tests
-                 UiPath.CLI.Windows.23.6.8581.19168\uipcli.exe test run "https://cloud.uipath.com" DefaultTenant -A uipatfkxtisk -I 505bea79-6241-4bfd-82e3-32c10cd566f2 -S a1#_0si_Tct(1$oU --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Monitoring OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs" -s "check" -o "OATestDev"
+                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe test run "https://cloud.uipath.com" DefaultTenant -A uipatfkxtisk -I 505bea79-6241-4bfd-82e3-32c10cd566f2 -S a1#_0si_Tct(1$oU --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Monitoring OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs" -s "check" -o "OATestDev"
        # Use uipcli to deploy
       - name: Deploy Project
         run: |
                  # Build and Deploy the Package
                  echo Deploying Package
-                 UiPath.CLI.Windows.23.6.8581.19168\uipcli.exe package deploy Output "https://cloud.uipath.com" DefaultTenant -A uipatfkxtisk -I 505bea79-6241-4bfd-82e3-32c10cd566f2 -S a1#_0si_Tct(1$oU --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Monitoring OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs" -s "check" -o "OATestDev"
+                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package deploy Output "https://cloud.uipath.com" DefaultTenant -A uipatfkxtisk -I 505bea79-6241-4bfd-82e3-32c10cd566f2 -S a1#_0si_Tct(1$oU --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Monitoring OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs" -s "check" -o "OATestDev"
        # Use uipcli to deploy
