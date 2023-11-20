@@ -18,7 +18,7 @@ jobs:
         run: |
                  # Build and Deploy the Package
                  echo Packing project
-                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package pack "CICDActions\project.json" -o "Output"
+                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package pack "project.json" -o "Output"
       # Use uipcli to run tests
       - name: Pack and Test
         run: |
