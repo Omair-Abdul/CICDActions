@@ -20,13 +20,14 @@ jobs:
                  echo Packing project
                  UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package pack "D:\a\CICDActions\CICDActions\project.json" -o "Output"
       # Use uipcli to run tests
-      - name: Test
-        run: |
-                 echo Running Tests
-                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe test run "https://staging.uipath.com" DefaultTenant -A "uipattxuvadh" -I "6e8e3a8e-8542-41fc-bce9-99bd85d85e19" -S "*Y*1VQSLba_~Et#E" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -s "TestCase" -o "Shared"
+      # - name: Test
+      #  run: |
+      #           echo Running Tests
+       #          UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe test run "https://staging.uipath.com" DefaultTenant -A "uipattxuvadh" -I "6e8e3a8e-8542-41fc-bce9-99bd85d85e19" -S "*Y*1VQSLba_~Et#E" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -s "TestCase" -o "Shared"
        # Use uipcli to deploy
       - name: Deploy Project
         run: |
                  # Build and Deploy the Package
                  echo Deploying Package
-                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package deploy "Output" "https://staging.uipath.com" DefaultTenant -A "uipattxuvadh" -I "6e8e3a8e-8542-41fc-bce9-99bd85d85e19" -S "*Y*1VQSLba_~Et#E" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -o "Shared"
+                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package deploy "Output" "https://cloud.uipath.com" DefaultTenant -A "uipatfkxtisk" -I "a6665c91-f401-4ab2-97ba-383f375238cd" -S "FsaT#oUh6$y)2lJ3" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -o "OATestDev"
+                 # UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package deploy "Output" "https://staging.uipath.com" DefaultTenant -A "uipattxuvadh" -I "6e8e3a8e-8542-41fc-bce9-99bd85d85e19" -S "*Y*1VQSLba_~Et#E" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -o "Shared"
