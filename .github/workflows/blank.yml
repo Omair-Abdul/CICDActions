@@ -23,7 +23,7 @@ jobs:
       - name: Test
         run: |
                  echo Running Tests
-                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe test run "https://staging.uipath.com" DefaultTenant -A "uipattxuvadh" -I "6e8e3a8e-8542-41fc-bce9-99bd85d85e19" -S "*Y*1VQSLba_~Et#E" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -o "Shared"
+                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe test run "https://staging.uipath.com" DefaultTenant -A "uipattxuvadh" -I "6e8e3a8e-8542-41fc-bce9-99bd85d85e19" -S "*Y*1VQSLba_~Et#E" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -o "TestCase"
        # Use uipcli to deploy
       - name: Deploy Project
         run: |
