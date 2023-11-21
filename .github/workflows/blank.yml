@@ -30,4 +30,3 @@ jobs:
                  # Build and Deploy the Package
                  echo Deploying Package
                  UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package deploy "Output" "https://cloud.uipath.com" DefaultTenant -A "uipatfkxtisk" -I "a6665c91-f401-4ab2-97ba-383f375238cd" -S "FsaT#oUh6$y)2lJ3" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -o "OATestDev"
-       # Use uipcli to deploy
