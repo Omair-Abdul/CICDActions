@@ -20,10 +20,10 @@ jobs:
                  echo Packing project
                  UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package pack "D:\a\CICDActions\CICDActions\project.json" -o "Output"
       # Use uipcli to run tests
-      # - name: Test
-      #  run: |
-      #           echo Running Tests
-       #          UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe test run "https://staging.uipath.com" DefaultTenant -A "uipattxuvadh" -I "6e8e3a8e-8542-41fc-bce9-99bd85d85e19" -S "*Y*1VQSLba_~Et#E" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -s "TestCase" -o "Shared"
+      - name: Test
+        run: |
+                 echo Running Tests
+                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe test run "https://staging.uipath.com" DefaultTenant -A "uipattxuvadh" -I "6e8e3a8e-8542-41fc-bce9-99bd85d85e19" -S "*Y*1VQSLba_~Et#E" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -s "TS1" -o "Shared"
        # Use uipcli to deploy
       - name: Deploy Project
         run: |
