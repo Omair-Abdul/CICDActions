@@ -18,13 +18,13 @@ jobs:
         run: |
                  # Build and Deploy the Package
                  echo Packing project
-                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package pack "D:\a\CICDActions\CICDActions\project.json" -o "Output" splitOutput=false
+                 UiPath.CLI.Windows.23.10.8753.32995\tools\uipcli.exe package pack "D:\a\CICDActions\CICDActions\project.json" -o "Output"
        # Use uipcli to deploy
       - name: Deploy Project
         run: |
                  # Build and Deploy the Package
                  echo Deploying Package
                  #UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package deploy "Output" "https://cloud.uipath.com" DefaultTenant -A "uipatfkxtisk" -I "a6665c91-f401-4ab2-97ba-383f375238cd" -S "FsaT#oUh6$y)2lJ3" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -o "OATestDev"
-                 UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package deploy "Output" "https://staging.uipath.com" DefaultTenant -A "uipattxuvadh" -I "6e8e3a8e-8542-41fc-bce9-99bd85d85e19" -S "scglYtl(Gb1uZ(_V" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -o "Shared" splitOutput=false
+                 UiPath.CLI.Windows.23.10.8753.32995\tools\uipcli.exe package deploy "Output" "https://staging.uipath.com" DefaultTenant -A "uipattxuvadh" -I "6e8e3a8e-8542-41fc-bce9-99bd85d85e19" -S "scglYtl(Gb1uZ(_V" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -o "Shared"
                  #UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package deploy "Output" "https://orchestrator.local" Default -I "a0559b2f-05f9-4644-8ba3-a496dba759b7" -S "t)qZEuNwJFyG2cZi" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -o "dummyFolder"
                  #UiPath.CLI.Windows.23.6.8581.19168\tools\uipcli.exe package deploy "Output" "https://fzuiporcapnpd01.corp.footlocker.net/" Default -I "0628d50a-782e-4959-b04e-59bc55abbe47" -S "SECRET" --applicationScope "OR.Folders OR.BackgroundTasks OR.TestSets OR.TestSetExecutions OR.TestSetSchedules OR.Settings.Read OR.Robots.Read OR.Machines.Read OR.Execution OR.Assets OR.Users.Read OR.Jobs OR.Monitoring" -o "UAT1" --identityUrl "https://fzuiporcapnpd01.corp.footlocker.net/identity"
